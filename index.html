@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Pływający inteligentny dom</title>
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <!-- Extra css -->
+    <link href="add_css/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="add_css/ionicons.min.css">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin">
+      <div class="mb-5 h2 font-weight-normal">
+        <i class="icon ion-md-boat"></i> Pływający inteligentny dom <i class="icon ion-md-boat"></i>
+      </div>
+
+  <h1 class="h3 mb-3 font-weight-normal">Zaloguj się</h1>
+  <label for="inputLogin" class="sr-only">Login</label>
+  <input type="text" class="form-control" placeholder="Login" required autofocus name="userid">
+  <label for="inputPassword" class="sr-only">Hasło</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Hasło" required name="userpswrd">
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Pamiętaj mnie
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="check(this.form)">Zaloguj</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+</form>
+
+<script language="javascript">
+function check(form)
+{
+
+ if(form.userid.value == "admin" && form.userpswrd.value == "admin")
+  {
+    window.open('dashboard.html')
+  }
+ else
+ {
+   alert("Podano błędny login lub hasło")
+  }
+}
+</script>
+
+</body>
+</html>

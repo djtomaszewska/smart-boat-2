@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pływający inteligentny dom</title>
+
+    <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.css">
+    <!-- Extra css -->
+    <link href="add_css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="add_css/ionicons.min.css">
+
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="add_css/ionicons.min.css">
+    <script src="add_js/jquery.min.js"></script>
+    <script src="add_js/solid.min.js"></script>
+    <script src="add_js/fontawesome.min.js"></script>
+    <script src="add_js/popper.min.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3> <i class="icon ion-md-boat"></i></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p class="center"><b>Menu</b></p>
+                <li class="active">
+                    <a href="dashboard.html">Strona główna</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Czujniki</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="temperature.html">Temperatura</a>
+                        </li>
+                        <li>
+                            <a href="humidity.html">Wilgotność</a>
+                        </li>
+                        <li>
+                            <a href="doors.html">Drzwi</a>
+                        </li>
+                        <li>
+                            <a href="gps.html">GPS</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Potencjalnie coś jeszcze</a>
+                </li>
+                <li>
+                    <a href="#">Ewentualnie coś jeszcze</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left"></i>
+              <span><h4><i class="icon ion-md-menu"></i></h4></span>
+            </button>
+        <div id="inside-cont">
+            <h2 class="center">Inteligentny pływający dom</h2>
+            <br>
+            <h3 class="center">Panel zarządzania</h3>
+
+            <div class="line"></div>
+
+            <h4>Najważniejsze informacje</h4>
+            <p>Alerty coś, w stylu:
+              <ul>
+                <li>O godzinie xx zarejestrowano temperaturę poniżej dopuszczalnej.</li>
+                <li>Czujnik zz zarejestrował wilgotność powyżej yy.</li>
+                <li>Drzwi xyz są w stanie otwarte.</li>
+                <li>Etc...</li>
+              </ul>
+            </p>
+        </div>
+      </div>
+    </div>
+
+<script>
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>
+  </body>
+</html>
